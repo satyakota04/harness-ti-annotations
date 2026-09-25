@@ -35,4 +35,15 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>maven-dev</id>
+            <url>https://pkg.harness.io/pkg/vpCkHKsDSxK9_KYfjCTMKA/harnessti-maven-plugin/maven</url>
+        </snapshotRepository>
+        <repository>
+            <id>maven-dev</id>
+            <url>https://pkg.harness.io/pkg/vpCkHKsDSxK9_KYfjCTMKA/harnessti-maven-plugin/maven</url>
+        </repository>
+    </distributionManagement>
 </project>
