@@ -9,6 +9,6 @@ import java.lang.annotation.Target;
  * Marks a test method that Test Intelligence must run on every build.
  * The Java agent matches the binary name {@code io.harness.agent.sdk.HarnessAlwaysRun}.
  */
-@Target(ElementType.METHOD)
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface HarnessAlwaysRun {}
