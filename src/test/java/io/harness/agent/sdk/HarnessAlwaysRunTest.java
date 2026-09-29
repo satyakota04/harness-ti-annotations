@@ -13,11 +13,11 @@ import static org.junit.Assert.assertEquals;
 public class HarnessAlwaysRunTest {
 
     @Test
-    public void retentionIsRuntimeAndTargetIsMethod() {
+    public void retentionIsRuntimeAndTargetIsTypeOrMethod() {
         Retention retention = HarnessAlwaysRun.class.getAnnotation(Retention.class);
         Target target = HarnessAlwaysRun.class.getAnnotation(Target.class);
 
         assertEquals(RetentionPolicy.RUNTIME, retention.value());
-        assertArrayEquals(new ElementType[] {ElementType.METHOD}, target.value());
+        assertArrayEquals(new ElementType[] {ElementType.TYPE, ElementType.METHOD}, target.value());
     }
 }
